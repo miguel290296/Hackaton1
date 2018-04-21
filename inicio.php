@@ -61,8 +61,8 @@ else{}
     });
      rootRef.child("Digital4").on("value", function(snapshot){
       console.log(snapshot.val());
-             if (snapshot.val() == 0) {document.getElementById("s4").textContent = "Abierto";}
-      else{document.getElementById("s5").textContent = "Cerrado";}
+             document.getElementById("s5").textContent = "Temperatura  "+snapshot.val()+" ℃";
+     
     });
 
   </script>
@@ -70,7 +70,7 @@ else{}
 <body>
 <a href="LogOut.php"><button >Cerrar Sesion </button></a>
 
-<table id="TablaUsers" class="table"  cellspacing="0">
+<table id="TablaUsers" class="table bg-info"  cellspacing="0" >
 
                       <thead>
                 <th >ID SENSOR</th> 
